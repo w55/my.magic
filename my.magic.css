@@ -1,0 +1,401 @@
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
+
+*, :before, :after {
+  margin: 0;
+  padding: 0;  
+  position: relative;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+input, select, button, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /*        appearance: none; */
+
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+/*-----------------------------------*\
+  $OBJECTS
+\*-----------------------------------*/
+
+.butt, .input {
+  padding: 5px 10px;
+  margin: 10px 8px;
+
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+  .butt:focus, .input:focus {
+    outline: none;
+  }
+  
+  .label {
+	 font-size: 1.3rem;
+  font-weight: 400;
+  color: #f35626;
+  
+  -webkit-animation: hue 40s infinite linear;
+  -moz-animation: hue 40s infinite linear;
+  -o-animation: hue 40s infinite linear;
+  animation: hue 40s infinite linear;
+}
+
+.butt {
+  border: 1px solid #f35626;
+  line-height: 1.375;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 1.1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  color: #f35626;
+  text-decoration-line: none;
+
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+  -moz-animation: hue 60s infinite linear;
+  -o-animation: hue 60s infinite linear;
+  animation: hue 60s infinite linear;
+}
+
+  .butt--primary {
+    background-color: #f35626;
+    color: #fff;
+  }
+
+.input {
+  border: 1px solid #c0c8c9;
+  border-radius: 4px;
+  
+  padding-left: 10px;/* for IE + Yandex.Browser - correct output */  
+  padding-top: 4px; /* for IE + Yandex.Browser - correct output */  
+  height: 36px; /* for IE + Yandex.Browser - correct output */    
+}
+
+  .input--dropdown {
+    background-image: url("../images/ddown.svg"), none;
+    background-repeat: no-repeat;
+    background-size: 24px 16px;
+    background-position: right center;
+	
+	height: 36px; /* for IE + Yandex.Browser - correct output */    
+  }
+  
+  option {
+	padding-left: 8px;	  
+	padding-right: 8px;
+  }
+  
+/* button and dropdown hover effects */  
+  .butt:hover, .input--dropdown:hover {
+	  border: 1px solid #f99;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.24);
+  }  
+  .butt:active {
+	  border: 1px solid #000;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.48), 0 2px 8px rgba(0,0,0,0.64);
+  }    
+  
+  
+/*-----------------------------------*\
+  $TYPOGRAPHY
+\*-----------------------------------*/
+
+h1, .alpha {
+  margin-bottom: 1.5rem;
+
+  /* font-size: 3rem; */
+  font-size: 2.4rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+h2, .beta {
+  margin-bottom: .75rem;
+
+  font-weight: 400;
+  /* font-size: 1.5rem; */
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (min-width: 650px) {
+  .mega {
+    /* font-size: 6rem; */
+    font-size: 5rem;
+    line-height: 1;
+  }
+}
+
+.subhead, .meta {
+  color: #7b8993;
+}
+
+.promo {
+  text-align: center;
+}
+
+p, hr, form {
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  border: none;
+  margin-top: -1px;
+  height: 1px;
+  background-color: #c0c8c9;
+  
+  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+  background-image: -moz-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+  background-image: -o-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+  background-image: linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+/*
+a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+  a:hover {
+    color: #f35626;
+  }
+*/
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.island {
+  padding: 1.5rem;
+}
+
+.isle {
+  padding: .75rem;
+}
+
+.spit {
+  padding: .375rem;
+}
+
+/*-----------------------------------*\
+  $BASE
+\*-----------------------------------*/
+
+html {
+  /* font: 100%/1.5 "Roboto", Verdana, sans-serif; */
+  font: 100%/1.8 "Roboto", Verdana, sans-serif;
+  color: #3d464d;
+  background-color: #fff;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  /* font-smoothing: antialiased; */
+  
+  /* width: 100%; */
+  height: 100%;
+
+  /* overflow: hidden-x; */
+
+  /* Centering in The Unknown */
+  text-align: center;
+	/*  Страница без полос прокрутки */
+	overflow:  hidden;  
+}
+
+
+
+/*-----------------------------------*\
+  $HEADER
+\*-----------------------------------*/
+
+.site__header {
+  -webkit-animation: slideLeftReturn 1.0s;
+  -moz-animation: slideLeftReturn 1.0s;
+  -o-animation: slideLeftReturn 1.0s;
+   animation: slideLeftReturn 1.0s;
+}
+.site__header #retrobox {
+  -webkit-animation: perspectiveRightReturn 2.0s;
+  -moz-animation: perspectiveRightReturn 2.0s;
+  -o-animation: perspectiveRightReturn 2.0s;
+  animation: perspectiveRightReturn 2.0s;
+}
+  .site__title {
+
+    color: #feab3a;
+    /*	  
+	background-image: -webkit-linear-gradient(132deg, #feab3a, #f35626);
+    background-image: -moz-linear-gradient(132deg, #feab3a, #f35626);
+    background-image: -o-linear-gradient(132deg, #feab3a, #f35626);
+    background-image: linear-gradient(132deg, #feab3a, #f35626);
+	
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-fill-color: transparent;
+	*/	
+    -webkit-animation: hue 30s infinite linear;
+    -moz-animation: hue 30s infinite linear;
+    -o-animation: hue 30s infinite linear;
+    animation: hue 30s infinite linear;
+  }
+
+.site__content {
+  -webkit-animation: slideRightReturn 1.5s;
+  -moz-animation: slideRightReturn 1.5s;
+  -o-animation: slideRightReturn 1.5s;
+  animation: slideRightReturn 1.5s;
+  
+  -webkit-animation-delay: .1s; 
+  -moz-animation-delay: .1s; 
+  -o-animation-delay: .1s; 
+  animation-delay: .1s; 
+}
+
+  .site__content form {
+    -webkit-animation: tinLeftIn 2.0s;
+    -moz-animation: tinLeftIn 2.0s;
+    -o-animation: tinLeftIn 2.0s;
+    animation: tinLeftIn 2.0s;
+	
+    -webkit-animation-delay: .1s; 
+    -moz-animation-delay: .1s; 
+    -o-animation-delay: .1s; 
+    animation-delay: .1s; 
+  }
+  
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@-moz-keyframes hue {
+  from {
+    -moz-filter: hue-rotate(0deg);
+  }
+  to {
+    -moz-filter: hue-rotate(-360deg);
+  }
+}
+@-o-keyframes hue {
+  from {
+    -o-filter: hue-rotate(0deg);
+  }
+  to {
+    -o-filter: hue-rotate(-360deg);
+  }
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+
+/*----------------------------------------------   from magic.style.css  ------------------------*/
+/* animation settings */
+#timing {
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+/*style for the demo*/
+#retrobox {
+	top: 200px;	
+	left: 33%;
+
+	width: 256px;
+	height: 256px;
+
+	position: fixed;	
+	z-index: 12;
+	
+	border: 3px solid #fff;
+
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	-o-border-radius: 14px;
+	border-radius: 14px;
+	
+	box-shadow: inset 0 2px 6px rgba(0,0,0,0.12), inset 0 2px 8px rgba(0,0,0,0.24), 0 2px 6px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.24);
+}
+#timing { 
+	top: 202px;	
+	left: 33%;
+	
+	width: 256px;
+	height: 256px;
+
+	position: fixed;
+	z-index: 13;
+
+	background: transparent;
+}
+#settings {
+	margin-top:450px;
+}	
+/*MEDIA QUERIES*/
+@media (max-width:786px) { /* for google ads responsive new code 2014 */
+	#retrobox {
+		top: 80px;		
+		left: 20%;
+		
+		width: 256px;
+		height: 256px;
+	}
+	#timing {
+		top: 82px;		
+		left: 20%;	
+		
+		width: 256px;
+		height: 256px;
+	}
+	#settings {
+		margin-top:300px;
+	}		
+}
+
