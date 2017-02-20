@@ -3,4 +3,8 @@
 
 Take a look: <a href="http://w55.webutu.com/my.magic.css/my.magic.html">DEMO PAGE</a>.
 
+<hr>
+<img width="600" src="Screenshots/screenshot-2.jpg" alt="screenshot-2" />
+<hr>
+
 This example uses HTML5, CSS3 and jQuery also.
